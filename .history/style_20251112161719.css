@@ -562,9 +562,8 @@ div.redes-sociais p.spotify {
         width: 100vw; /* Ocupa toda a largura */
         max-width: none; /* Remove o limite */
         height: auto; /* Altura automática */
-        padding: 30px 20px 0px 10px; /* Reduz o padding */
+        padding: 30px 50px 0px 50px; /* Reduz o padding */
         position: relative; /* Para contexto de posicionamento, se necessário */
-        background: linear-gradient(62deg, #311E6D 00%, #C17AE4 110%);
     }
 
 
@@ -572,21 +571,8 @@ div.redes-sociais p.spotify {
         width: 100vw; /* Ocupa toda a largura */
         height: auto; /* Altura automática */
         min-height: 50vh; /* Garante uma altura mínima */
-        padding: 40px 20px 40px 20px; /* Reduz o padding */
+        padding: 40px 20px; /* Reduz o padding */
         overflow: visible; /* Remove a rolagem interna da seção */
-    }
-
-    section.sobre,
-    section.inscricao,
-    section.mapa {
-
-         padding: 40px 40px 40px 30px;
-
-    }
-
-    section.inscricao .texto a {
-        padding: 6px 10px;
-        font-size: 15px;
     }
 
     .logos-mobile {
@@ -601,14 +587,13 @@ div.redes-sociais p.spotify {
     }
 
     img.logo-ecos {
-        width: 55%;
+        width: 67%;
         max-width: 300px;
     }
 
     h2 {
-        font-size: 14px;
+        font-size: 15px;
         text-align: center;
-        max-width: 70%;
     }
 
     div.line {
@@ -622,12 +607,11 @@ div.redes-sociais p.spotify {
         justify-content: center; /* Centraliza os botões */
         gap: 6px; /* Espaçamento menor */
         margin-bottom: 30px; /* Reduz margem inferior */
-        max-width: 100%;
+        max-width: 200px;
     }
 
     div.menu div.btn {
-        font-size: 12px;
-        padding: 4px 6px;
+        font-size: 13px;
     }
 
     .logos {
@@ -669,22 +653,16 @@ div.redes-sociais p.spotify {
 
     /* 4. Carrossel do Catálogo */
     div.container-grupos .lista {
-        /* padding-left: 5px; */
+        padding-left: 5px;
         padding-right: 5px;
     }
 
     .scroll-arrow.left {
         left: 5px; /* Move seta para dentro */
-        display: none;
     }
 
     .scroll-arrow.right {
         right: 5px; /* Move seta para dentro */
-        display: none;
-    }
-
-    .container-grupos.has-overflow .scroll-arrow {
-        display: none;
     }
 
     /* Reduz um pouco o tamanho dos cards */

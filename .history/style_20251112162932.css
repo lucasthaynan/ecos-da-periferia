@@ -564,7 +564,6 @@ div.redes-sociais p.spotify {
         height: auto; /* Altura automática */
         padding: 30px 20px 0px 10px; /* Reduz o padding */
         position: relative; /* Para contexto de posicionamento, se necessário */
-        background: linear-gradient(62deg, #311E6D 00%, #C17AE4 110%);
     }
 
 
@@ -601,14 +600,13 @@ div.redes-sociais p.spotify {
     }
 
     img.logo-ecos {
-        width: 55%;
+        width: 67%;
         max-width: 300px;
     }
 
     h2 {
-        font-size: 14px;
+        font-size: 15px;
         text-align: center;
-        max-width: 70%;
     }
 
     div.line {
