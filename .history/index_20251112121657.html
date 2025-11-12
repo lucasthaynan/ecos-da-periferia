@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css?v=1.0">
+    <title>Ecos da Periferia</title>
+</head>
+
+<body>
+
+    <header class="left">
+        <div class="container">
+            <img class="logo-ecos" src="./imagens/logo-ecos-da-periferia.png" alt="" srcset="">
+            <h2>Catálogo virtual de artistas e grupos periféricos de Maceió</h2>
+            <div class="line"></div>
+            <div class="menu">
+                <div class="btn catalogo active">Catálogo</div>
+                <div class="btn mapa">Mapa</div>
+                <div class="btn inscricao">Ecoe sua arte</div>
+                <div class="btn sobre">Sobre</div>
+            </div>
+            <div class="line"></div>
+            <div class="logos">
+                <p>Patrocinado por:</p>
+                <div class="list-logos">
+                    <img src="./imagens/logos.png" alt="" srcset="">
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="catalogo">
+        <h3>Catálogo de artistas e grupos</h3>
+        <!-- O conteúdo do catálogo será injetado aqui pelo main.js -->
+        <div id="catalogo-container">
+            <!-- Ex:
+            <div class="container-grupos hiphop">
+                <div class="chapeu">Hip hop</div>
+                <div class="lista">
+                    <div class="artista">
+                        <img src="./imagens/yara-pao.jpg" alt="" srcset="">
+                        <p class="nome">Yara Pão</p>
+                    </div>
+                </div>
+            </div>
+            -->
+        </div>
+    </section>
+
+    <section class="sobre">
+        <h3>Sobre</h3>
+        <div class="texto-sobre">
+            <p>Ecos da Periferia é um repositório digital dedicado à documentação e preservação da cultura urbana das periferias de Maceió. O projeto reúne expressões artísticas como hip-hop, grafite, reggae, breakdance, beatbox, RAP e outras manifestações culturais que fazem parte da identidade e da resistência das comunidades locais.</p>
+
+            <p>A iniciativa tem como objetivo catalogar e organizar informações sobre artistas e grupos periféricos, reunindo fotos, vídeos, histórias, trabalhos realizados e um mapa interativo dos bairros onde essas expressões acontecem.</p>
+
+            <p>Maceió abriga uma cena cultural periférica vibrante, muitas vezes pouco reconhecida e registrada. Esta plataforma nasceu para dar visibilidade a esses artistas e coletivos, tornando-se um espaço de memória viva e uma vitrine virtual acessível ao público, fortalecendo a valorização da cultura popular urbana.</p>
+
+            <p>Mais do que um catálogo, o projeto é também um canal de divulgação e conexão, permitindo que novos talentos sejam descobertos, ampliem sua rede de contatos e encontrem oportunidades. Assim, o Ecos da Periferia contribui para combater o apagamento histórico e a invisibilização de quem transforma a arte em expressão e resistência nos bairros de Maceió.</p>
+        </div>
+
+    </section>
+
+    <section class="inscricao">
+        <h3>Ecoe sua arte</h3>
+        <div class="texto">
+            <p>Você faz parte da cena cultural das periferias de Maceió? Então o <strong>Ecos da Periferia</strong> quer te conhecer!</p>
+
+            <p>Estamos reunindo <strong>artistas, grupos e coletivos</strong> que transformam seus bairros com arte, música, dança, grafite, poesia e tantas outras expressões que fazem a cultura periférica pulsar.</p>
+
+            <p><strong>Participar é simples e rápido:</strong> o formulário leva <em>menos de 5 minutos</em> para ser preenchido.</p>
+
+            <p>Depois da revisão pela nossa equipe, o seu projeto será incluído no nosso repositório digital e ficará disponível no site do projeto, ampliando sua visibilidade e conectando você a novas oportunidades.</p>
+
+            <p>
+                <span role="img" aria-label="microfone">🎤</span>
+                <strong>Mostre sua arte. Compartilhe sua história. Faça parte do Ecos da Periferia!</strong>
+            </p>
+
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSfzvYbxJebNGb6wvNbh2_c32vhloQDOg-_QEQi-MzioaAaz4A/viewform" target="_blank">Clique aqui para preencher o formulário!</a>
+        </div>
+
+    </section>
+
+    <section class="mapa">
+        <h3>Mapeamentos dos grupos e artistas</h3>
+        <div class="texto-sobre">
+            <p>Mapa</p>
+        </div>
+
+    </section>
+
+    <!-- Popup permanece o mesmo, será preenchido pelo JS -->
+    <div class="popup">
+        <div class="container">
+            <div class="btn-close">X</div>
+            <div class="imagem">
+                <div class="container-foto">
+                    <img src="./imagens/yara-pao.jpg" alt="">
+                </div>
+                <p class="credito"><strong>Crédito:</strong> Divulgação/Instagram</p>
+            </div>
+            <div class="infos">
+                <div class="chapeu">Grafite</div>
+                <p class="nome">Yara Pão</p>
+                <p class="bairro">Benedito Bentes</p>
+                <div class="biografia">
+                    <p>Lorem ipsum dolor sit amet. Ut accusamus perspiciatis ab aliquid perferendis ut quia enim et soluta libero. Et beatae praesentium cum omnis consequatur qui assumenda quisquam qui repellendus quia et inventore suscipit aut quidem expedita qui vitae consequatur.</p>
+                    <p>Lorem ipsum dolor sit amet. Ut accusamus perspiciatis ab aliquid perferendis ut quia enim et soluta libero. Et beatae praesentium cum omnis consequatur qui assumenda quisquam qui repellendus quia et inventore suscipit aut quidem expedita qui vitae consequatur.</p>
+                </div>
+                <div class="redes-sociais">
+                    <a href="http://"><p class="instagram">Instagram</p></a>
+                    <a href="http://"><p class="spotify">Spotify</p></a>
+                    <a href="http://"><p class="compartilhar">Compartilhar</p></a>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+
+    <script src="main.js?v=1.1"></script> <!-- Mudei a versão para v=1.1 para evitar cache -->
+
+</body>
+
+</html>

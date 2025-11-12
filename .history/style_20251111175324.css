@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --bg-page: #02021C;
+    --bg-menu: linear-gradient(40deg, #311E6D, #C17AE4);
+    --font-color: #C1B3D6;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg-page);
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #ffffff;
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    justify-content: space-between;
+    align-items: center
+}
+
+img {
+    width: 40px;
+    height: auto;
+}
+
+
+
+header {
+    width: 37vw;
+    height: 100vh;
+    /* border: #C17AE4 solid 1px; */
+    background: linear-gradient(96deg, #311E6D 00%, #C17AE4 110%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 75px;
+}
+
+section {
+    width: 63vw;
+    height: 100vh;
+    padding: 60px;
+    /* border: #5db872 solid 1px; */
+}
+
+img.logo-ecos {
+    width: 300px;
+}
+
+h2 {
+    font-size: 19px;
+    font-weight: 400;
+    color: var(--font-color);
+}
+
+div.line {
+    border-top: 1px solid #ffffff;
+    margin: 60px 0;
+}
+
+div.menu {
+    display: flex;
+    flex-direction: column;
+    
+}
