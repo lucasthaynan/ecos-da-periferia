@@ -731,14 +731,13 @@ div.redes-sociais p.spotify {
     }
 
     div.popup p.nome {
-        font-size: 26px;
+        font-size: 28px; /* Reduz fonte */
         text-align: center;
-        padding: 8px 0px 0px 0px;
+        padding: 8px;
     }
 
     div.popup p.bairro {
         text-align: center;
-        font-size: 14px;
     }
 
     div.popup .biografia {

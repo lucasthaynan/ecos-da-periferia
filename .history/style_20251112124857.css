@@ -676,7 +676,7 @@ div.redes-sociais p.spotify {
     /* 5. Popup Responsivo */
     div.popup .container {
         flex-direction: column; /* Empilha imagem e infos */
-        width: 90vw;
+        width: 95vw;
         max-width: 450px;
         height: auto; /* Altura automática */
         max-height: 90vh; /* Limite de altura */
@@ -708,7 +708,7 @@ div.redes-sociais p.spotify {
 
     div.popup .container .imagem .container-foto {
         width: 95%;
-        height: 230px;
+        height: 250px;
     }
 
     div.popup p.credito {
@@ -731,14 +731,12 @@ div.redes-sociais p.spotify {
     }
 
     div.popup p.nome {
-        font-size: 26px;
+        font-size: 28px; /* Reduz fonte */
         text-align: center;
-        padding: 8px 0px 0px 0px;
     }
 
     div.popup p.bairro {
         text-align: center;
-        font-size: 14px;
     }
 
     div.popup .biografia {
