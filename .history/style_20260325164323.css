@@ -760,11 +760,10 @@ div.redes-sociais p.spotify {
     
     div.popup div.chapeu {
         margin: 0 auto; /* Centraliza o chapéu */
-        font-size: 11px;
     }
 
     div.popup p.nome {
-        font-size: 24px;
+        font-size: 26px;
         text-align: center;
         padding: 8px 0px 0px 0px;
     }
@@ -775,7 +774,7 @@ div.redes-sociais p.spotify {
     }
 
     div.popup .biografia {
-        height: 150px; /* Reduz altura */
+        height: 180px; /* Reduz altura */
         padding-right: 5px;
     }
     
@@ -786,7 +785,7 @@ div.redes-sociais p.spotify {
 
     div.redes-sociais {
         justify-content: center; /* Centraliza redes */
-        margin-top: 1px;
+        margin-top: 20px;
     }
 
 }
