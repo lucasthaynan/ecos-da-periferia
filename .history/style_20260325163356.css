@@ -300,9 +300,9 @@ div.lista .artista::after {
 /* Nome sobreposto à imagem */
 div.lista .artista .nome {
   position: absolute;
-      bottom: 14px;
-    left: 13px;
-    right: 13px;
+  bottom: 8px;
+  left: 10px;
+  right: 10px;
   color: #fff;
   font-weight: 600;
   font-size: 16px;
@@ -453,7 +453,7 @@ div.popup div.chapeu {
 }
 
 div.popup p.nome{
-    font-size: 33px;
+    font-size: 35px;
     font-weight: 500;
 }
 
