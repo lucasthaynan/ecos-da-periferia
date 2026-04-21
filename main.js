@@ -23,7 +23,7 @@ const totalResultadosEl = document.getElementById('catalogo-total-resultados');
 const totalSegmentosEl = document.getElementById('catalogo-total-segmentos');
 const limparBuscaBtn = document.getElementById('catalogo-limpar');
 
-const MAPBOX_TOKEN = window.MAPBOX_TOKEN || '';
+const MAPBOX_TOKEN = window.MAPBOX_TOKEN || 'pk.eyJ1IjoibHVjYXN0aGF5bmFuLWVzdGFkYW8iLCJhIjoiY21vOHZqOTNhMDJ2NzJ0b204c21zdTkzaiJ9.fFQY_lXspHzJILcDKT8Skw';
 
 const CORES_SEGMENTO = {
   'Folguedo': '#F06292',
