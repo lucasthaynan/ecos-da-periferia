@@ -32,6 +32,7 @@
         gtag('config', 'G-024YHDKTDW');
     </script>
 
+    <link href="https://api.mapbox.com/mapbox-gl-js/v3.2.0/mapbox-gl.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <title>Ecos da Periferia</title>
 </head>
@@ -61,6 +62,23 @@
 
     <section class="catalogo">
         <h3>Catálogo de artistas e grupos</h3>
+        <div class="catalogo-filtros">
+            <div class="campo-busca">
+                <label for="catalogo-busca">Buscar por nome</label>
+                <input type="search" id="catalogo-busca" placeholder="Ex.: Bumba Meu Boi, Orquestra, Yara...">
+            </div>
+            <div class="campo-bairro">
+                <label for="catalogo-bairro">Filtrar por bairro</label>
+                <select id="catalogo-bairro">
+                    <option value="">Todos os bairros</option>
+                </select>
+            </div>
+            <button type="button" id="catalogo-limpar">Limpar</button>
+        </div>
+        <div class="catalogo-resumo">
+            <div class="catalogo-resumo-item"><span id="catalogo-total-resultados">0</span><small>resultados</small></div>
+            <div class="catalogo-resumo-item"><span id="catalogo-total-segmentos">0</span><small>segmentos</small></div>
+        </div>
         <!-- O conteúdo do catálogo será injetado aqui pelo main.js -->
         <div id="catalogo-container">
             <!-- Ex:
@@ -133,11 +151,15 @@
 
     <section class="mapa">
         <h3>Mapeamentos dos grupos e artistas</h3>
-        <div class="texto-sobre">
-            <p>Mapa em construção...</p>
-            <!-- Idealmente, aqui entraria um iframe do Google Maps ou similar -->
+        <div class="mapa-intro">
+            <p>Explore no mapa os grupos e artistas com localização já cadastrada. Passe o mouse sobre os pins para ver um resumo e clique para abrir os detalhes.</p>
+            <div class="mapa-stats">
+                <div class="mapa-stat"><span id="mapa-total-pontos">0</span><small>pontos no mapa</small></div>
+                <div class="mapa-stat"><span id="mapa-sem-coordenadas">0</span><small>ainda sem coordenadas</small></div>
+            </div>
         </div>
-
+        <div id="mapa-legenda" class="mapa-legenda"></div>
+        <div id="mapbox-mapa"></div>
     </section>
 
     <!-- Popup permanece o mesmo, será preenchido pelo JS -->
@@ -186,6 +208,7 @@
     </div>
 
     <!-- O ?v=1.1 foi removido, mas pode ser ?v=2.0 -->
+    <script src="https://api.mapbox.com/mapbox-gl-js/v3.2.0/mapbox-gl.js"></script>
     <script src="main.js"></script>
 
 </body>

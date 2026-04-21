@@ -11,11 +11,12 @@
     padding: 0;
     box-sizing: border-box;
     -webkit-tap-highlight-color: transparent;
-    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
-div, img {
-  -webkit-tap-highlight-color: transparent;
+div,
+img {
+    -webkit-tap-highlight-color: transparent;
 }
 
 
@@ -31,11 +32,13 @@ body {
     height: 100vh;
     justify-content: space-between;
     align-items: center;
-    overflow-x: hidden; /* Previne rolagem horizontal no desktop */
+    overflow-x: hidden;
+    /* Previne rolagem horizontal no desktop */
 }
 
 img {
-    max-width: 100%; /* Boa prática para responsividade */
+    max-width: 100%;
+    /* Boa prática para responsividade */
     height: auto;
 }
 
@@ -65,7 +68,8 @@ section {
     display: flex;
     flex-direction: column;
     gap: 30px;
-    overflow: auto; /* Mantém a rolagem interna SÓ da seção */
+    overflow: auto;
+    /* Mantém a rolagem interna SÓ da seção */
 }
 
 /* --- Estilização da barra de rolagem da seção --- */
@@ -152,7 +156,8 @@ section.inscricao .texto a {
     border-radius: 6px;
     margin-top: 30px;
     font-weight: 600;
-    transition: background-color 0.3s; /* Adiciona transição */
+    transition: background-color 0.3s;
+    /* Adiciona transição */
     line-height: 38px;
 }
 
@@ -215,13 +220,108 @@ h3 {
     font-size: 26px;
 }
 
+
+.catalogo-filtros {
+    display: grid;
+    grid-template-columns: minmax(240px, 1.7fr) minmax(220px, 1fr) auto;
+    gap: 14px;
+    align-items: end;
+    max-width: 980px;
+}
+
+.catalogo-filtros label {
+    display: block;
+    font-size: 14px;
+    color: var(--font-color);
+    margin-bottom: 8px;
+}
+
+.catalogo-filtros input,
+.catalogo-filtros select {
+    width: 100%;
+    height: 48px;
+    border-radius: 12px;
+    border: 1px solid rgba(193, 122, 228, 0.25);
+    background: rgba(12, 8, 28, 0.95);
+    color: #fff;
+    padding: 0 16px;
+    font-size: 15px;
+    outline: none;
+}
+
+.catalogo-filtros input::placeholder {
+    color: #8f84a9;
+}
+
+.catalogo-filtros input:focus,
+.catalogo-filtros select:focus {
+    border-color: #C17AE4;
+    box-shadow: 0 0 0 3px rgba(193,122,228,0.14);
+}
+
+#catalogo-limpar {
+    display: none;
+    height: 48px;
+    padding: 0 18px;
+    border: 0;
+    border-radius: 12px;
+    background: #A96BD0;
+    color: #fff;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+#catalogo-limpar:hover {
+    transform: translateY(-1px);
+    opacity: 0.95;
+}
+
+.catalogo-resumo {
+    display: none;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-top: -12px;
+}
+
+.catalogo-resumo-item {
+    min-width: 140px;
+    padding: 12px 15px;
+    border-radius: 14px;
+    background: rgba(15, 10, 35, 0.82);
+    border: 1px solid rgba(193,122,228,0.18);
+}
+
+.catalogo-resumo-item span {
+    display: block;
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 1;
+    margin-bottom: 5px;
+}
+
+.catalogo-resumo-item small {
+    color: var(--font-color);
+    text-transform: uppercase;
+    letter-spacing: .04em;
+    font-size: 12px;
+}
+
+.catalogo-vazio {
+    padding: 26px 0;
+    color: var(--font-color);
+    font-size: 17px;
+}
+
+
 div.container-grupos {
     display: flex;
     flex-direction: column;
     gap: 10px;
     padding-top: 20px;
     margin-top: 5px;
-    position: relative; /* Essencial para posicionar as setas */
+    position: relative;
+    /* Essencial para posicionar as setas */
 }
 
 div.container-grupos.grafite {
@@ -230,14 +330,26 @@ div.container-grupos.grafite {
 
 
 /* --- Carrossel horizontal --- */
+/* div.container-grupos .lista {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap; 
+    gap: 18px;
+    overflow-x: auto; 
+    padding-bottom: 40px; 
+    scroll-behavior: smooth; 
+    border-bottom: 1px solid #4c2a62;
+} */
+
+
 div.container-grupos .lista {
     display: flex;
     flex-direction: row;
-    flex-wrap: nowrap; /* Impede que os itens quebrem para a linha de baixo */
+    flex-wrap: wrap;
     gap: 18px;
-    overflow-x: auto; /* Adiciona a rolagem horizontal */
-    padding-bottom: 40px; /* Espaço para a barra de rolagem não ficar colada */
-    scroll-behavior: smooth; /* Para a rolagem ser suave */
+    overflow-x: auto;
+    padding-bottom: 40px;
+    scroll-behavior: smooth;
     border-bottom: 1px solid #4c2a62;
 }
 
@@ -254,75 +366,101 @@ div.container-grupos .lista {
 
 
 div.chapeu {
-    padding: 5px 25px;
+    padding: 9px 33px;
     background-color: #A96BD0;
     width: fit-content;
     text-transform: uppercase;
-    border-radius: 15px;
+    border-radius: 24px;
     margin-bottom: 12px;
-    font-size: 14px;
+    font-size: 16px;
 }
 
 /* Card do artista */
 div.lista .artista {
-  position: relative;
-  width: 220px; /* Largura fixa */
-  height: 220px; /* Altura fixa */
-  flex-shrink: 0; /* Impede que o item encolha */
-  overflow: hidden;
-  border-radius: 8px;
-  cursor: pointer;
+    position: relative;
+    width: 320px;
+    /* Largura fixa */
+    height: 220px;
+    /* Altura fixa */
+    flex-shrink: 0;
+    /* Impede que o item encolha */
+    overflow: hidden;
+    border-radius: 8px;
+    cursor: pointer;
 }
 
 div.lista .artista img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform 0.4s ease;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
 }
 
 div.lista .artista:hover img {
-  transform: scale(1.08);
+    transform: scale(1.08);
 }
 
 /* Degradê preto suave na parte inferior */
 div.lista .artista::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 50%;
-  background: linear-gradient(to top, rgba(0,0,0,0.7), rgba(0,0,0,0));
-  pointer-events: none;
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0));
+    pointer-events: none;
 }
 
 /* Nome sobreposto à imagem */
 div.lista .artista .nome {
-  position: absolute;
-      bottom: 14px;
+    position: absolute;
+    bottom: 14px;
     left: 13px;
     right: 13px;
-  color: #fff;
-  font-weight: 600;
-  font-size: 16px;
-  z-index: 2;
-  text-shadow: 0 2px 4px rgba(0,0,0,0.5);
-  margin: 0;
+    color: #fff;
+    font-weight: 600;
+    font-size: 16px;
+    z-index: 2;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    margin: 0;
+}
+
+
+div.lista .artista .bairro-card {
+    position: absolute;
+    left: 13px;
+    bottom: 40px;
+    z-index: 2;
+    display: none;
+    align-items: center;
+    padding: 4px 9px;
+    border-radius: 999px;
+    background: rgba(10, 7, 26, 0.78);
+    border: 1px solid rgba(255,255,255,0.14);
+    color: #e8def5;
+    font-size: 11px;
+    max-width: calc(100% - 26px);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 
 /* --- Estilos das Setas de Navegação --- */
 .scroll-arrow {
     position: absolute;
-    top: 56%; /* Centraliza um pouco abaixo do meio, para não cobrir o chapéu */
+    top: 56%;
+    /* Centraliza um pouco abaixo do meio, para não cobrir o chapéu */
     transform: translateY(-50%);
-    background-color: rgba(49, 30, 109, 0.7); /* Cor do tema com transparência */
+    background-color: rgba(49, 30, 109, 0.7);
+    /* Cor do tema com transparência */
     color: #C1B3D6;
     border: 1px solid #C1B3D6;
     border-radius: 50%;
     width: 40px;
     height: 40px;
-    display: flex; /* Usar flex para centralizar o ícone */
+    display: flex;
+    /* Usar flex para centralizar o ícone */
     align-items: center;
     justify-content: center;
     font-size: 20px;
@@ -330,10 +468,11 @@ div.lista .artista .nome {
     cursor: pointer;
     z-index: 10;
     transition: all 0.2s ease;
-    user-select: none; /* Impede que o texto da seta seja selecionado */
-    
+    user-select: none;
+    /* Impede que o texto da seta seja selecionado */
+
     /* Começam escondidas até o JS adicionar a classe 'has-overflow' */
-    display: none; 
+    display: none;
 }
 
 /* O JS adiciona 'has-overflow' no container-grupos se a rolagem for necessária */
@@ -342,22 +481,26 @@ div.lista .artista .nome {
 }
 
 .scroll-arrow:hover {
-    background-color: rgba(193, 122, 228, 0.7); /* Cor mais clara no hover */
+    background-color: rgba(193, 122, 228, 0.7);
+    /* Cor mais clara no hover */
     color: #fff;
     border-color: #fff;
 }
 
 .scroll-arrow.left {
-    left: -22px; /* Posição da seta esquerda */
+    left: -22px;
+    /* Posição da seta esquerda */
 }
 
 .scroll-arrow.right {
-    right: -22px; /* Posição da seta direita */
+    right: -22px;
+    /* Posição da seta direita */
 }
 
 /* --- Estilos do Popup --- */
 div.popup {
-    position: fixed; /* Mudei para fixed para cobrir a tela inteira, mesmo com rolagem */
+    position: fixed;
+    /* Mudei para fixed para cobrir a tela inteira, mesmo com rolagem */
     top: 0;
     left: 0;
     width: 100vw;
@@ -383,11 +526,13 @@ div.popup .container {
     justify-content: flex-start;
     align-items: flex-start;
     flex-direction: row;
-    position: relative; /* Contexto para o botão fechar */
+    position: relative;
+    /* Contexto para o botão fechar */
 }
 
 div.popup .container .btn-close {
-    position: absolute; /* Relativo ao .container */
+    position: absolute;
+    /* Relativo ao .container */
     width: 30px;
     height: 30px;
     background-color: #C1B3D6;
@@ -395,13 +540,16 @@ div.popup .container .btn-close {
     align-items: center;
     justify-content: center;
     font-size: 24px;
-    padding: 22px; /* Padding menor */
+    padding: 22px;
+    /* Padding menor */
     font-weight: 600;
     color: var(--bg-page);
     border-radius: 50%;
     cursor: pointer;
-    right: 20px; /* Posição mais simples */
-    top: 20px; /* Posição mais simples */
+    right: 20px;
+    /* Posição mais simples */
+    top: 20px;
+    /* Posição mais simples */
     z-index: 110;
     transition: all 0.3s;
 }
@@ -452,7 +600,7 @@ div.popup div.chapeu {
     font-size: 13px;
 }
 
-div.popup p.nome{
+div.popup p.nome {
     font-size: 33px;
     font-weight: 500;
 }
@@ -475,12 +623,14 @@ div.popup .biografia::-webkit-scrollbar {
 }
 
 div.popup .biografia::-webkit-scrollbar-track {
-    background: #000; /* fundo da área da barra */
+    background: #000;
+    /* fundo da área da barra */
     border-radius: 10px;
 }
 
 div.popup .biografia::-webkit-scrollbar-thumb {
-    background-color: #bd9ecd; /* rosa */
+    background-color: #bd9ecd;
+    /* rosa */
     border-radius: 10px;
 }
 
@@ -556,40 +706,79 @@ div.redes-sociais p.spotify {
 
 
 /* --- INÍCIO: Media Queries para Responsividade --- */
+@media (max-width: 1750px) {
+    div.lista .artista {
+
+        width: 280px;
+        height: 220px;
+
+    }
+
+    section {
+        padding: 70px 30px 70px 30px;
+    }
+}
 
 @media (max-width: 900px) {
 
     /* 1. Layout Principal */
     body {
-        flex-direction: column; /* Empilha header e section */
-        height: auto; /* Permite que o conteúdo cresça */
-        overflow-x: hidden; /* Evita rolagem horizontal */
+        flex-direction: column;
+        /* Empilha header e section */
+        height: auto;
+        /* Permite que o conteúdo cresça */
+        overflow-x: hidden;
+        /* Evita rolagem horizontal */
+    }
+    section {
+        padding: 70px;
     }
 
     header {
-        width: 100vw; /* Ocupa toda a largura */
-        max-width: none; /* Remove o limite */
-        height: auto; /* Altura automática */
-        padding: 30px 20px 0px 10px; /* Reduz o padding */
-        position: relative; /* Para contexto de posicionamento, se necessário */
+        width: 100vw;
+        /* Ocupa toda a largura */
+        max-width: none;
+        /* Remove o limite */
+        height: auto;
+        /* Altura automática */
+        padding: 30px 20px 0px 10px;
+        /* Reduz o padding */
+        position: relative;
+        /* Para contexto de posicionamento, se necessário */
         background: linear-gradient(62deg, #311E6D 00%, #C17AE4 110%);
     }
 
 
     section {
-        width: 100vw; /* Ocupa toda a largura */
-        height: auto; /* Altura automática */
-        min-height: 50vh; /* Garante uma altura mínima */
-        padding: 40px 20px 40px 20px; /* Reduz o padding */
-        overflow: visible; /* Remove a rolagem interna da seção */
+        width: 100vw;
+        /* Ocupa toda a largura */
+        height: auto;
+        /* Altura automática */
+        min-height: 50vh;
+        /* Garante uma altura mínima */
+        padding: 40px 20px 40px 20px;
+        /* Reduz o padding */
+        overflow: visible;
+        /* Remove a rolagem interna da seção */
     }
 
     section.sobre,
     section.inscricao,
     section.mapa {
 
-         padding: 40px 40px 40px 30px;
+        padding: 40px 40px 40px 30px;
 
+    }
+
+    div.container-grupos .lista {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        gap: 18px;
+        overflow-x: auto;
+        padding-bottom: 40px;
+        scroll-behavior: smooth;
+        border-bottom: 1px solid #4c2a62;
     }
 
     section.inscricao .texto a {
@@ -603,7 +792,8 @@ div.redes-sociais p.spotify {
 
     /* 2. Menu do Header */
     header .container {
-        align-items: center; /* Centraliza itens do header */
+        align-items: center;
+        /* Centraliza itens do header */
         display: flex;
         flex-direction: column;
     }
@@ -623,13 +813,18 @@ div.redes-sociais p.spotify {
         margin: 30px 0;
         width: 80%;
     }
-    
+
     div.menu {
-        flex-direction: row; /* Menu horizontal */
-        flex-wrap: wrap; /* Permite quebrar a linha */
-        justify-content: center; /* Centraliza os botões */
-        gap: 6px; /* Espaçamento menor */
-        margin-bottom: 30px; /* Reduz margem inferior */
+        flex-direction: row;
+        /* Menu horizontal */
+        flex-wrap: wrap;
+        /* Permite quebrar a linha */
+        justify-content: center;
+        /* Centraliza os botões */
+        gap: 6px;
+        /* Espaçamento menor */
+        margin-bottom: 30px;
+        /* Reduz margem inferior */
         max-width: 100%;
     }
 
@@ -641,10 +836,11 @@ div.redes-sociais p.spotify {
     .logos {
         display: none;
         flex-direction: column;
-        align-items: center; /* Centraliza logos */
+        align-items: center;
+        /* Centraliza logos */
     }
 
-    body > header > div > div:nth-child(5) {
+    body>header>div>div:nth-child(5) {
         display: none;
     }
 
@@ -653,8 +849,10 @@ div.redes-sociais p.spotify {
     section.inscricao h3,
     section.mapa h3,
     section.catalogo h3 {
-        margin-top: 0; /* Remove margem extra */
-        font-size: 28px; /* Reduz fonte do título da seção */
+        margin-top: 0;
+        /* Remove margem extra */
+        font-size: 28px;
+        /* Reduz fonte do título da seção */
         text-align: center;
     }
 
@@ -663,11 +861,12 @@ div.redes-sociais p.spotify {
         max-width: 100%;
         width: 100%;
     }
-    
+
     section.inscricao .texto p {
-         width: 100%; /* Ocupa toda a largura */
-         font-size: 16px;
-         line-height: 26px;
+        width: 100%;
+        /* Ocupa toda a largura */
+        font-size: 16px;
+        line-height: 26px;
     }
 
     section.sobre .texto-sobre p {
@@ -682,12 +881,14 @@ div.redes-sociais p.spotify {
     }
 
     .scroll-arrow.left {
-        left: 5px; /* Move seta para dentro */
+        left: 5px;
+        /* Move seta para dentro */
         display: none;
     }
 
     .scroll-arrow.right {
-        right: 5px; /* Move seta para dentro */
+        right: 5px;
+        /* Move seta para dentro */
         display: none;
     }
 
@@ -707,14 +908,19 @@ div.redes-sociais p.spotify {
 
     /* 5. Popup Responsivo */
     div.popup .container {
-        flex-direction: column; /* Empilha imagem e infos */
+        flex-direction: column;
+        /* Empilha imagem e infos */
         width: 90vw;
         max-width: 450px;
-        height: auto; /* Altura automática */
-        max-height: 90vh; /* Limite de altura */
+        height: auto;
+        /* Altura automática */
+        max-height: 90vh;
+        /* Limite de altura */
         padding: 40px 20px 20px 20px;
-        overflow-y: auto; /* Permite rolagem *dentro* do popup */
-        position: relative; /* Contexto para o botão de fechar */
+        overflow-y: auto;
+        /* Permite rolagem *dentro* do popup */
+        position: relative;
+        /* Contexto para o botão de fechar */
     }
 
     /* Botão de fechar */
@@ -726,16 +932,19 @@ div.redes-sociais p.spotify {
         width: 30px;
         height: 30px;
         font-size: 18px;
-        padding: 0; /* Remove padding antigo */
+        padding: 0;
+        /* Remove padding antigo */
     }
 
     /* Seção da Imagem no Popup */
     div.popup .container .imagem {
         width: 100%;
-        left: 0; /* Reseta posicionamento */
+        left: 0;
+        /* Reseta posicionamento */
         display: flex;
         flex-direction: column;
-        align-items: center; /* Centraliza a imagem */
+        align-items: center;
+        /* Centraliza a imagem */
     }
 
     div.popup .container .imagem .container-foto {
@@ -744,22 +953,26 @@ div.redes-sociais p.spotify {
     }
 
     div.popup p.credito {
-        text-align: center; /* Centraliza crédito */
+        text-align: center;
+        /* Centraliza crédito */
         margin-left: 0;
     }
 
     /* Seção de Informações no Popup */
     div.popup .container .infos {
         width: 100%;
-        padding-left: 0; /* Reseta padding */
+        padding-left: 0;
+        /* Reseta padding */
         margin-top: 20px;
         display: flex;
         flex-direction: column;
-        align-items: center; /* Centraliza conteúdo */
+        align-items: center;
+        /* Centraliza conteúdo */
     }
-    
+
     div.popup div.chapeu {
-        margin: 0 auto; /* Centraliza o chapéu */
+        margin: 0 auto;
+        /* Centraliza o chapéu */
         font-size: 11px;
     }
 
@@ -775,18 +988,232 @@ div.redes-sociais p.spotify {
     }
 
     div.popup .biografia {
-        height: 150px; /* Reduz altura */
+        height: 150px;
+        /* Reduz altura */
         padding-right: 5px;
     }
-    
+
     div.popup .biografia p {
         font-size: 14px;
         line-height: 21px;
     }
 
     div.redes-sociais {
-        justify-content: center; /* Centraliza redes */
+        justify-content: center;
+        /* Centraliza redes */
         margin-top: 1px;
     }
 
+}
+
+/* --- MAPA --- */
+section.mapa h3 {
+    margin-top: 50px;
+}
+
+.mapa-intro {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    max-width: 920px;
+}
+
+.mapa-intro p {
+    color: var(--font-color);
+    font-size: 17px;
+    line-height: 28px;
+}
+
+.mapa-stats {
+    display: none;
+    gap: 14px;
+    flex-wrap: wrap;
+}
+
+.mapa-stat {
+    min-width: 170px;
+    padding: 14px 16px;
+    border-radius: 14px;
+    background: linear-gradient(135deg, rgba(193,122,228,0.22), rgba(49,30,109,0.5));
+    border: 1px solid rgba(193,122,228,0.28);
+    backdrop-filter: blur(8px);
+}
+
+.mapa-stat span {
+    display: block;
+    font-size: 30px;
+    font-weight: 700;
+    color: #fff;
+    line-height: 1;
+    margin-bottom: 6px;
+}
+
+.mapa-stat small {
+    color: var(--font-color);
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+
+#mapbox-mapa {
+    width: 100%;
+    min-height: 540px;
+    border-radius: 22px;
+    overflow: hidden;
+    border: 1px solid rgba(193,122,228,0.25);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
+    background: #090617;
+}
+
+.mapa-legenda {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: -8px;
+}
+
+.legenda-item {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 14px;
+    border-radius: 999px;
+    background: rgba(15, 10, 35, 0.82);
+    border: 1px solid rgba(193,122,228,0.18);
+    color: #fff;
+    font-size: 14px;
+}
+
+.legenda-item small {
+    color: var(--font-color);
+}
+
+.legenda-cor {
+    width: 11px;
+    height: 11px;
+    border-radius: 999px;
+    display: inline-block;
+    box-shadow: 0 0 0 3px rgba(255,255,255,0.08);
+}
+
+.marker-wrapper {
+    background: transparent;
+    border: 0;
+    padding: 0;
+    cursor: pointer;
+}
+
+.custom-marker {
+    width: 34px;
+    height: 34px;
+    border-radius: 50% 50% 50% 0;
+    transform: rotate(-45deg);
+    transform-origin: center center;
+    background: var(--marker-color, #A96BD0);
+    border: 2px solid rgba(255,255,255,0.88);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.custom-marker span {
+    transform: rotate(45deg);
+    color: #fff;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1;
+}
+
+.marker-wrapper:hover .custom-marker {
+    transform: rotate(-45deg) scale(1.08);
+    box-shadow: 0 10px 26px rgba(0,0,0,0.35);
+}
+
+.mapa-tooltip-popup .mapboxgl-popup-content {
+    background: rgba(7, 5, 25, 0.96);
+    color: #fff;
+    border: 1px solid rgba(193,122,228,0.25);
+    border-radius: 14px;
+    box-shadow: 0 18px 45px rgba(0,0,0,0.35);
+    padding: 12px 14px;
+}
+
+.mapa-tooltip-popup .mapboxgl-popup-tip {
+    border-top-color: rgba(7, 5, 25, 0.96) !important;
+}
+
+.mapa-tooltip {
+    min-width: 180px;
+}
+
+.mapa-tooltip .tag {
+    display: inline-block;
+    margin-bottom: 8px;
+    padding: 4px 9px;
+    border-radius: 999px;
+    background: rgba(193,122,228,0.18);
+    color: #d8b6ee;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: .05em;
+}
+
+.mapa-tooltip strong {
+    display: block;
+    font-size: 15px;
+    line-height: 1.35;
+    margin-bottom: 4px;
+}
+
+.mapa-tooltip p {
+    color: var(--font-color);
+    font-size: 13px;
+}
+
+.mapboxgl-ctrl-group {
+    background: rgba(10, 7, 26, 0.88) !important;
+    border: 1px solid rgba(193,122,228,0.2);
+    box-shadow: 0 10px 24px rgba(0,0,0,0.22);
+}
+
+.mapboxgl-ctrl-group button + button {
+    border-top: 1px solid rgba(193,122,228,0.15);
+}
+
+.mapboxgl-ctrl-group button span {
+    filter: invert(1) brightness(1.4);
+}
+
+@media (max-width: 900px) {
+    #mapbox-mapa {
+        min-height: 440px;
+    }
+
+    .mapa-stat {
+        min-width: 150px;
+    }
+}
+
+
+
+@media (max-width: 900px) {
+    .catalogo-filtros {
+        grid-template-columns: 1fr;
+    }
+
+    #catalogo-limpar {
+        width: 100%;
+    }
+
+    .catalogo-resumo-item {
+        min-width: calc(50% - 6px);
+    }
+}
+
+.mapboxgl-ctrl-top-righ,
+.mapboxgl-ctrl-bottom-left,
+.mapboxgl-ctrl-bottom-right {
+    display: none !important;
 }
