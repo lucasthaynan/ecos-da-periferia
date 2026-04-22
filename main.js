@@ -208,6 +208,8 @@ function renderizarCatalogo(dados) {
       divArtista.dataset.credito = artista['Credito Foto'] || '';
       divArtista.dataset.redes = artista['Redes sociais'] || '';
       divArtista.dataset.spotify = artista.Spotify || '';
+      divArtista.dataset.youtube = artista.YouTube || '';
+      divArtista.dataset.site = artista.Site || '';
       divArtista.addEventListener('click', () => abrirPopup(divArtista.dataset));
       divLista.appendChild(divArtista);
     });
@@ -251,6 +253,14 @@ function abrirPopup(data) {
 
   if (data.spotify && data.spotify.trim()) {
     redesContainer.innerHTML += `<a href="${data.spotify}" target="_blank" rel="noopener noreferrer"><p class="spotify">Spotify</p></a>`;
+  }
+
+  if (data.youtube && data.youtube.trim()) {
+    redesContainer.innerHTML += `<a href="${data.youtube}" target="_blank" rel="noopener noreferrer"><p class="youtube">YouTube</p></a>`;
+  }
+  // site
+  if (data.site && data.site.trim()) {
+    redesContainer.innerHTML += `<a href="${data.site}" target="_blank" rel="noopener noreferrer"><p class="site">Site</p></a>`;
   }
 
   popup.style.display = 'flex';
@@ -405,7 +415,9 @@ const mapa = new mapboxgl.Map({
         foto: item.Foto || '',
         credito: item['Credito Foto'] || '',
         redes: item['Redes sociais'] || '',
-        spotify: item.Spotify || ''
+        youtube: item.YouTube || '',
+        site: item.Site || ''
+        
       });
     });
 

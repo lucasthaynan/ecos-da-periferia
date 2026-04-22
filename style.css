@@ -683,6 +683,15 @@ div.redes-sociais p.spotify {
     background-color: #24D15F;
     color: #02021C;
 }
+div.redes-sociais p.youtube {
+    background-color: #cf1111;
+    color: #FFFFFF;
+}
+
+div.redes-sociais p.site {
+    background-color: #dbdbdb;
+    color: #10204c;
+}
 
 .logos-mobile {
     background: linear-gradient(96deg, #311E6D 00%, #C17AE4 110%);
